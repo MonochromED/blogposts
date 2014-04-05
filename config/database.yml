@@ -3,10 +3,12 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
+
+# PostgreSQL implementation for database.
 development:
   adapter: postgresql
   encoding: unicode
-  database: reviews_website_development
+  database: blogpost_website_development
   pool: 5
   timeout: 5000
   username: admin
@@ -20,7 +22,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: reviews_website_test
+  database: blogpost_website_test
   pool: 5
   timeout: 5000
   username: admin
@@ -31,7 +33,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: reviews_website_production
+  database: blogpost_website_production
   pool: 5
   timeout: 5000
   username: admin
