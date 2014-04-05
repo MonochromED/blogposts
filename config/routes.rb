@@ -1,4 +1,4 @@
-Restaurant::Application.routes.draw do
+Post::Application.routes.draw do
   
 
   get "news_posts/index"

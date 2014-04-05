@@ -3,11 +3,11 @@
 
 #---CAUTION--THIS WILL DELETE ALL ENTRIES FOR PERTAINING DATABASE--
 #User.delete_all#Uncomment to delete all existing user entries.
-#News.delete_all
-#Review.delete_all
+#Newspost.delete_all
+#Post.delete_all
 #------------------------------------------------------------
 
-#Uncomment below to add in a new User entry to the database.  Uncomment and fill value for data members.
+#Uncomment below to add in a new Model entry to the database.  Uncomment and fill value for data members.
 #----------------------------------------------------------------------------------
 #tempVar = News.new
 #tempVar.id = 0#Uncomment and specify ID value to edit existing entry.

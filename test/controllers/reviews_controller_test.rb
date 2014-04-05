@@ -50,14 +50,14 @@ class ReviewsControllerTest < ActionController::TestCase
   #Create a duplicate user and test for failure
   test "should reject duplicate user creation" do
     user1 = User.new( :userid => "test",
-                              :password => "testing",
-                              :fullname => "Ima Test",
-                              :email => "test@myhost.com")
+      :password => "testing",
+      :fullname => "Ima Test",
+      :email => "test@myhost.com")
                               
     user2 = User.new(:userid => "test",
-                             :password => "testing",
-                             :fullname => "Ima Test Too",
-                             :email => "test@myhost.com")
+     :password => "testing",
+     :fullname => "Ima Test Too",
+     :email => "test@myhost.com")
 
     post :newuser, user: user1
     post :newuser, user: user2
