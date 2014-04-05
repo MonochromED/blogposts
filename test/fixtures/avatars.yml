@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  avatar_user_id: MyString
+  avatar_file_name: MyString
+  avatar_content_type: MyString
+  avatar_file_size: 1
+  avatar_updated_at: 2013-11-04 22:43:12
+
+two:
+  avatar_user_id: MyString
+  avatar_file_name: MyString
+  avatar_content_type: MyString
+  avatar_file_size: 1
+  avatar_updated_at: 2013-11-04 22:43:12

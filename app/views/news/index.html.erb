@@ -1,0 +1,46 @@
+<!--The Main Window View for News -->
+
+<table>
+
+
+  <tbody>
+   
+    <br />  
+    <h1 id="mainWindowHeader">Latest News</h1>
+    <br />
+    <br />
+    <% for newspost in @news_posts %>
+      <tr>
+        <tr>
+          <td>
+            <%= link_to newspost.title, newspost %> <br />
+            <%= newspost.date %><br />
+            <%= newspost.article %><br /><br />
+            <div class="indexIdInfo">News ID: <%= newspost.id %></div><br />
+          </td>
+        </tr>
+        <tr>
+          
+          <td><%= link_to 'Show', newspost %>
+            <% if controller.allowAccessIfUserRankAtLeast(1) %>
+              <%= link_to 'Edit', edit_news_path(newspost) %>
+              <%= link_to 'Delete', newspost, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% else %>
+            <% end %>
+          </td>
+        </tr>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+<br />
+<% if controller.allowAccessIfUserRankAtLeast(1) %>
+  <%= link_to 'New newspost', new_news_path %>
+<% end %>
+
+
+
+
+

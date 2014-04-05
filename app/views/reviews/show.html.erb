@@ -1,0 +1,60 @@
+
+<p>
+  <strong>Title:</strong>
+  <%= @review.title %>
+</p>
+<p>
+  <strong>Poster:</strong>
+  <%= @review.poster %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @review.date %>
+</p>
+
+<p>
+  <strong>Article:</strong>
+  <%= @review.article %>
+</p>
+<% if controller.allowAccessIfOwnerNameIsOrRankAtLeast("#{@review.poster}", 1) %>
+  <%= link_to 'Edit', edit_review_path(@review) %> |
+  <%= link_to 'Delete', @review, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %>
+<%= link_to 'Back', reviews_path %>
+
+
+<p>
+   <h2>Comments:</h2>
+   <% for comment in @review.comments.reverse %>
+   posted by: <%= comment.poster %><br />
+       on: <%= comment.date %><br />
+   <%= comment.comment %><br /><br />
+   <div class="indexIdInfo">
+   Review ID: <%= @review.id %><br />
+   Comment ID:<%= comment.id %> <br /><br />
+   <%@comment_id_value = comment.id %>
+   <%@review_id_value = @review.id %>
+  </div>
+   <!--Validate that current logged user has ownership of this post -->
+     <% if controller.allowAccessIfOwnerNameIsOrRankAtLeast("#{comment.poster}", 1) %>
+       <%= link_to 'Edit', edit_comment_path(comment) %> |
+       <%= link_to 'Delete Comment', action: :deletecomment, :commentid => @comment_id_value, :reviewid => @review_id_value  %><br />
+     <% end %>
+   <% end %>
+
+</p>
+<hr />
+<h2>Submit new comment:</h2>
+<%= form_tag :action => 'comment', :id => @review do%>
+<% if controller.userIsLoggedIn() %>
+<strong><!--Poster: --></strong><%= hidden_field "comment", "poster", :value => "#{controller.getUser}"  %><br /><br />
+<% else %>
+<strong>Currently Not Logged In.</strong><%= hidden_field "comment", "poster", :value => "Anonymous"  %><br /><br />
+<% end %>
+<strong>Date: </strong><%= datetime_select "comment", "date" %><br /><br />
+<strong>Comment:</strong><br />
+<%= text_area "comment", "comment", :rows => 5 %><br />
+<%= submit_tag "Comment" %>
+<% end %>
+

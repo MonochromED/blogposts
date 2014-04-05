@@ -1,0 +1,685 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"newsTab",
+				"newsTabExpandEffectOn"
+			],
+			[
+				"newsTabExpand",
+				"newsTabExpandEffectOff"
+			],
+			[
+				"news",
+				"newsTabExpandEffectOn"
+			],
+			[
+				"newsTa",
+				"newsTabExpandEffectOn"
+			],
+			[
+				"navi",
+				"navigationElementEffectOff"
+			],
+			[
+				"nav",
+				"navigationElementEffectOff"
+			],
+			[
+				"navigati",
+				"navigationElementEffectOn"
+			],
+			[
+				"footer",
+				"footer_and_non_footer_height"
+			],
+			[
+				"window_height_",
+				"window_height_minus_footer"
+			],
+			[
+				"window",
+				"window_height"
+			],
+			[
+				"docu",
+				"document_height"
+			],
+			[
+				"dash",
+				"dashboardMain"
+			],
+			[
+				"min",
+				"minDashboardMainHeight"
+			],
+			[
+				"user",
+				"user"
+			],
+			[
+				"if",
+				"if	if"
+			],
+			[
+				"navigatio",
+				"navigation_element"
+			],
+			[
+				"position",
+				"position_y"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"change",
+				"changeFaceDirection"
+			],
+			[
+				"face",
+				"face"
+			],
+			[
+				"right",
+				"right"
+			],
+			[
+				"position_y",
+				"position_y"
+			],
+			[
+				"projectile",
+				"projectile"
+			],
+			[
+				"delete",
+				"deleteAllProjectiles"
+			],
+			[
+				"projecti",
+				"projectiles_list"
+			],
+			[
+				"left",
+				"moveUnitLeft"
+			],
+			[
+				"position_x",
+				"position_x"
+			],
+			[
+				"do",
+				"do"
+			],
+			[
+				"comment",
+				"comment"
+			],
+			[
+				"avatar",
+				"avatar_user_id"
+			],
+			[
+				"av",
+				"avatar_user_id"
+			],
+			[
+				"i",
+				"id"
+			],
+			[
+				"registered",
+				"registeredUser"
+			],
+			[
+				"reg",
+				"registeredUser"
+			],
+			[
+				"factor",
+				"factorialOfRandomNum"
+			],
+			[
+				"set",
+				"setPrice"
+			],
+			[
+				"toast",
+				"toast_condition"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1403,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Ruby/Ruby.sublime-build",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: upd",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"",
+				"Build: Cancel"
+			],
+			[
+				"Package Control: disc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: d",
+				"Package Control: Discover Packages"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/H/Programming Code and Notes/RubyOnRails_Projects/Blogposts/blogposts/Gemfile",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/users/userprofile.html.erb",
+		"/H/Programming Code and Notes/HTML Projects/SVG button/SVG_Button_Demo.html",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/public/assets/application-87332aa47c34ab85ca49faeb57e317e9.css",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/javascripts/searchdropdown.js",
+		"/H/test.js",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/javascripts/application.js",
+		"/H/SharedWindowsFiles/icon-global-78669b2f2d012e91c663ed302a5a27bb.svg",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/helpers/application_helper.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/config/application.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/public/assets/SVG/Website_Header_Curly_Decoration.svg",
+		"/H/Programming Code and Notes/HTML Projects/SVG button/Organic_Shape.svg",
+		"/H/Art/Website_Header_Curly_Decoration.svg",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/images/SVG/Website_Header_Curly_Decoration.svg",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/images/SVG/svg-styling.css",
+		"/H/Programming Code and Notes/HTML Projects/SVG button/Website_Header_Curly_Decoration.svg",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/config/initializers/mime_types.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/layouts/application.html.erb",
+		"/h/Programming Code and Notes/RubyOnRails_Projects/RspecInRailsSetupTest/rspec-rails-app/Gemfile",
+		"/H/Programming Code and Notes/Only_Ruby_Projects/RSpec Testing Practice/book class/spec/spec_helper.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/test/controllers/reviews_controller_test.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/controllers/news_controller.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/news/_form.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/test/controllers/news_controller_test.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/test/test_helper.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/test/controllers/avatar_controller_test.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/stylesheets/review.css.scss",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/stylesheets/application.css",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/config/routes.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/config/environment.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/config/database.yml",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/config.ru",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/javascripts/news.js.coffee",
+		"/H/Programming Code and Notes/HTML Projects/webDesignSamples/webDesignSamples/app/views/web_design_sample/index.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/Gemfile",
+		"/H/Programming Code and Notes/HTML Projects/webDesignSamples/webDesignSamples/app/views/layouts/application.html.erb",
+		"/H/Programming Code and Notes/HTML Projects/interactiveButtonsTest/app/views/bottom_page_footer/index.html.erb",
+		"/H/Programming Code and Notes/JavaScript Projects/Scribd Robot Fruit Hunt/robot-fruit-hunt/assets/js/test.js",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/javascripts/test.js.coffee",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/javascripts/test.coffee",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/javascripts/reviews.js.coffee",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/javascripts/firstFieldFocus.js",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/public/assets/application-1ac63f21cd8a3b66c94b52ddf83180ef.css",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/public/assets/application-0ebd8c567375fa785b0ca693cd078e94.js",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/stylesheets/scaffolds.css.scss",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/restaurant/login.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/avatars/new.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/avatars/edit.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/_form.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/register.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/news/new.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/news/show.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/userUpdateUtil.rxml",
+		"/Y/GIT Repository/ReviewsBlog/restaurant/UpdateUtil.rxml.builder",
+		"/H/Programming Code and Notes/JavaScript Projects/Scribd Robot Fruit Hunt/robot-fruit-hunt-9b2468765caee696b96b435a04d3b3bb33a37d85/robot-fruit-hunt-9b2468765caee696b96b435a04d3b3bb33a37d85/assets/js/board.js",
+		"/H/Programming Code and Notes/JavaScript Projects/Scribd Robot Fruit Hunt/robot-fruit-hunt-9b2468765caee696b96b435a04d3b3bb33a37d85/robot-fruit-hunt-9b2468765caee696b96b435a04d3b3bb33a37d85/mybot.js",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/users/login.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/test_proj/angularjs_rails/restauranteur/config.ru",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/controllers/application_controller.rb",
+		"/C/Users/kami_sama/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/kami_sama/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/kami_sama/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/news/edit.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/comments/show.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/comments/index.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/users/show.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/news/_news_partial.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/users/register.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/comments/_comment_form.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/comments/edit.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/show.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/controllers/avatars_controller.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/users/index.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/index.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/restaurant/index.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/avatars/index.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/models/user.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/models/review.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/controllers/reviews_controller.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/news/index.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/stylesheets/navigationBar.css.scss",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/stylesheets/reviews.css.scss",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/stylesheets/news.css.scss",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/search.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/avatars/search.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/avatars/_avatar_form.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/users/new.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/javascripts/dashboard.js",
+		"/C/Users/kami_sama/Downloads/Package Control.sublime-package",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/new.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/logout.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/login.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/index.rss.builder",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/editcomment.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/reviews/edit.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/views/avatars/show.html.erb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/controllers/users_controller.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/controllers/restaurant_controller.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/controllers/comments_controller.rb",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/bin/rails",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/bin/bundle",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/config/boot.rb",
+		"/C/Users/kami_sama/Downloads/b001.dump",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/javascripts/image-rotater.js",
+		"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/app/assets/javascripts/image-rotater"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"userprofile_users",
+			"a.",
+			"news",
+			"footer",
+			"non_footer",
+			"width",
+			"min-width",
+			"xml",
+			"object",
+			"onject",
+			"image",
+			"navigation_element",
+			"nav_element",
+			"non_footer",
+			"news_pull",
+			"navigation",
+			"determineNav",
+			"min-height",
+			"footer",
+			"absolute",
+			"footer",
+			"foooter",
+			"main",
+			"bottom",
+			"search_bar",
+			"first",
+			"set_user",
+			"set_review",
+			"shift",
+			"reset_font",
+			"ctrl+0",
+			"ctrl+=",
+			"ctrl+\"+\"",
+			"ctrl+ +",
+			"ctrl",
+			"news_posts",
+			"news_post",
+			"()\n",
+			"set_user",
+			"getUser",
+			"get_user",
+			"user_access",
+			".rota",
+			"rotate",
+			":notice",
+			"footer",
+			"height",
+			"a",
+			"calc",
+			"margin",
+			"right",
+			"float",
+			"position",
+			"height",
+			"overflo",
+			"main",
+			"z-index",
+			"footer",
+			"margin",
+			"padding",
+			"float",
+			"footer",
+			"div",
+			"overflow",
+			"float",
+			"footer",
+			"dash",
+			"dashboard",
+			"relative",
+			"bottom",
+			"display",
+			"navigation",
+			"create",
+			"comment",
+			"review",
+			"format",
+			"rss",
+			"usersPro",
+			"set_review",
+			"review",
+			"belongs",
+			"review",
+			"new_review_path",
+			"review",
+			"reviews",
+			"newspost",
+			"review",
+			"R",
+			"review",
+			"set_review",
+			"review",
+			"reviews",
+			"reviews_url",
+			"reviews",
+			"review",
+			"reviews",
+			"end",
+			"reviews\n",
+			"\n",
+			"'\n",
+			"reviews",
+			"review",
+			"reviews",
+			"end",
+			"reviews",
+			"review",
+			"reviews",
+			"}\n",
+			"reviews",
+			"getAccessRank",
+			"search",
+			"transparent",
+			"color:",
+			"transparent",
+			"searc",
+			"main",
+			"h",
+			"h1",
+			"112233",
+			"{\n",
+			"main",
+			"112233",
+			"	\n",
+			"112233",
+			"header",
+			"form",
+			"112233",
+			"float"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								735,
+								735
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"level",
+				"test_proj/bubble_pop_game/level_board.rb"
+			],
+			[
+				"",
+				"3.0'"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/H/Programming Code and Notes/RubyOnRails_Projects/FoothillRuby/restaurant/Project_RestaurantReview.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 316.0,
+	"status_bar_visible": true
+}

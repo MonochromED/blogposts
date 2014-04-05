@@ -1,0 +1,36 @@
+<table>
+
+
+  <tbody>
+   
+    <br />  
+    <h1 id="mainWindow">Restaurant Reviews Comments</h1>
+    <br />
+    <br />
+    <% for comment in @comments %>
+      <tr>
+        <tr>
+          <td>
+            <%= link_to "comment", comment %>  submitted by <%= comment.poster %><br />
+            <%= comment.date %><br />
+            <%= comment.comment %><br /><br />
+            <div class = "indexIdInfo"> id Value: <%= comment.id %></div><br/>
+          </td>
+        </tr>
+        <tr>
+          
+          <td><%= link_to 'Show', comment %>
+            <% if controller.allowAccessIfOwnerNameIsOrRankAtLeast( "#{comment.poster}", 1 ) %>
+              <%= link_to 'Edit', edit_comment_path(comment) %>
+              <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% else %>
+            <% end %>
+          </td>
+        </tr>
+      </tr>
+    <% end %>
+  </tbody>
+
+
+</table>
+

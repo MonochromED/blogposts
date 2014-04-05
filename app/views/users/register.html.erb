@@ -1,0 +1,31 @@
+<!-- User Register View -->
+
+<h1>Register for new account</h1>
+
+<%= form_tag :action => 'newuser' do %> 
+  <p> 
+    <b>User ID</b><br /> 
+    <%= text_field_tag :userid, nil, id: "first_field_focus" %> 
+  </p> 
+  <p> 
+    <b>Full Name</b><br />
+
+    <%= text_field_tag :fullname %> 
+  </p>
+
+  <p> <b>Password</b><br /> 
+    <%= password_field_tag :password %> 
+  </p>
+  <p> <b>Password Confirm</b><br /> 
+    <%= password_field_tag :password_confirmation %> 
+  </p>
+
+  <p> 
+    <b>E-mail</b><br /> 
+    <%= text_field_tag :email %> 
+  </p>
+  <br />
+  <p> 
+    <%= submit_tag "Create Account" %> 
+  </p> 
+  <% end %>

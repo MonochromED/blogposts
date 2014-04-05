@@ -1,0 +1,38 @@
+
+<p>
+
+
+  <strong>User:</strong>
+  <%= @avatar.avatar_user_id  %>
+</p>
+<p>
+  <strong>Avatar ID Num:</strong>
+  <%= @avatar.id  %>
+
+</p>
+  <strong>Avatar File Name:</strong>
+  <%= @avatar.avatar_file_name  %>
+
+</p>
+  <strong>Avatar File Size:</strong>
+  <%= @avatar.avatar_file_size  %>
+</p>
+  <strong>Avatar uploaded at:</strong>
+  <%= @avatar.avatar_updated_at %>
+</p>
+
+Avatar:
+
+<%= image_tag @avatar.avatar.url() %>
+
+<br />
+<br />
+  <%= link_to 'Edit', edit_avatar_path(@avatar) %>|
+
+<%= link_to 'Back', avatars_path %>
+
+
+
+
+
+

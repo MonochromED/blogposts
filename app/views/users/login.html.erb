@@ -1,0 +1,20 @@
+<!-- Login Page -->
+
+<!--Request referring page to redirect back to after login-->
+<% session[:return_to_page] = request.referrer %>
+
+<h1>Please Login</h1>
+<%= form_tag :action => 'validate' do %>
+  <p>
+    <b>User ID</b><br />
+    <%= text_field_tag :userid, nil, id: "first_field_focus" %>
+  </p>
+  
+  <p>
+    <b>Password</b><br />
+    <%= password_field_tag :password %>
+  </p>
+  <p>
+    <%= submit_tag "Login" %>
+  </p>
+<% end %>

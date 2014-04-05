@@ -1,0 +1,12 @@
+<!--News Partial-->
+
+<p>
+    <% news = News.order('date desc').limit(1) %>
+    <% for item in news %>
+      <b><%= item.title %></b><br />
+      <%= item.date %><br />
+      <%= item.article %><br /><br />
+    <% end %>
+</p>
+
+<%= link_to 'More News', news_index_path %>

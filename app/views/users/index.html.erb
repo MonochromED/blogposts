@@ -1,0 +1,27 @@
+<strong><h1>Users</h1></strong>
+<table>
+
+
+  <tbody>
+   
+
+    <% for user in @users %>
+      <tr>
+        <tr>
+          <td>
+            <%= link_to user.userid, user %><br />
+            <%= user.fullname %><br />
+            User id Value: <%= user.id %><br/>
+          </td>
+        </tr>
+        <tr>
+          
+        </tr>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br />
+<br />
+
+

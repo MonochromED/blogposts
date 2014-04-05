@@ -1,0 +1,441 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/*CSS Reset */
+
+*{
+  margin: 0;
+}
+h1 {
+  color: tan;
+  background-color: transparent;
+  margin-bottom: 10px; }
+
+#mainWindowHeader {
+  font-size: 110%;
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 0px #ffd08c;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: tan;
+  border-width: 1px;
+  color: tan; }
+
+#header {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: white;
+  height: 75px;
+  text-decoration: none;
+  padding-top: 10px;
+  width: calc(100%);
+  width: -moz-calc(100%);
+  width: -webkit-calc(100%);
+  width: -o-calc(100%);
+  width: -ms-calc(100%); }
+
+#headerBanner {
+  background: white url(/assets/images/banner.jpg) no-repeat right;
+  box-shadow: inset 0px 0px 2px 2px rgba(255, 255, 255, 0.9);
+  margin-bottom: 0px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  font-family: Verdana,Arial,sans-serif;
+  font-size: 160%;
+  color: tan;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#slogan {
+  font-size: 110%;
+  padding: 0px 0px 0px 20px;
+  font-weight: bold;
+  background-color: white;
+  z-index: 2;
+  margin-bottom: 10px;
+  color: tan;
+  width: 250px;
+  font-size: 14px; }
+
+* {
+  background-color: transparent; }
+
+h2 {
+  font-family: Arial,sans-serif;
+  font-size: 120%;
+  color: tan;
+  margin: 0px;
+  padding: 0px; }
+
+> h3 {
+  font-family: Arial,sans-serif;
+  font-size: 110%;
+  color: tan;
+  margin: 0px;
+  padding: 0px; }
+
+h4 {
+  font-family: Arial,sans-serif;
+  font-size: 100%;
+  color: tan;
+  margin: 0px;
+  padding: 0px; }
+
+#navigation {
+  margin: 30px;
+  margin-top: 100px;
+  margin-bottom: 2px;
+  float: top;
+  width: calc(100% - 80px);
+  width: -webkit-calc(100% - 80px);
+  width: -o-calc(100% - 80px);
+  width: -ms-calc(100% - 80px);
+  height: 20px;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  background-color: transparent;
+  text-align: center;
+  z-index: 1; }
+
+#navigation_elements_panel {
+  vertical-align: text-center; }
+
+.navigation_element {
+  display: inline-block;
+  height: 20px;
+  vertical-align: text-center;
+  background-color: transparent;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 2px;
+  transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  text-decoration: none;
+  border-radius: 25px 0px 25px 0px; }
+
+.navigation_element:hover {
+  color: #666666; }
+
+navigation_flash_notice {
+  color: orange;
+  width: 150px; }
+
+#main_panel {
+  float: bottom;
+  width: 800px;
+  padding: 7px;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100%;
+  background-color: #2c4055; }
+
+#pagination_panel {
+  float: bottom;
+  width: 99%;
+  text-align: center;
+  padding: 7px;
+  border-bottom: 1px;
+  border-top: 1px;
+  background-color: transparent; }
+
+#footer {
+  height: 120px;
+  position: relative;
+  bottom: 0px;
+  width: calc(100%);
+  width: -moz-calc(100%);
+  width: -webkit-calc(100%);
+  width: -o-calc(100%);
+  width: -ms-calc(100%);
+  text-align: center;
+  background-color: white; }
+
+.footer_text {
+  background-color: white;
+  color: #112233;
+  text-decoration: none;
+  font-size: x-small; }
+
+.search_bar {
+  border-radius: 5px;
+  display: inline-block; }
+
+#search_pane {
+  position: relative;
+  top: 90px;
+  height: 0px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 600px;
+  z-index: 1; }
+
+#search_icon {
+  position: relative;
+  width: 200px;
+  height: 20px;
+  background-color: tan;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer; }
+
+#search_bar_area {
+  position: relative;
+  border: 2px solid tan;
+  width: 200px;
+  height: auto;
+  display: none;
+  border-radius: 5px;
+  background-color: #112233; }
+
+#find_button {
+  float: auto;
+  padding-right: 25px; }
+
+#news {
+  position: fixed;
+  right: 0px;
+  top: 100px;
+  width: 50px;
+  padding: 0px;
+  background-color: #112233;
+  margin-bottom: 2px;
+  max-height: 250px;
+  z-index: 1;
+  opacity: 0.25;
+  border-radius: 10px; }
+
+#news:hover {
+  opacity: 1; }
+
+#news_pull_tab {
+  text-align: center;
+  vertical-align: text-center;
+  float: left;
+  width: 50px;
+  background-color: #ffffff;
+  height: 250px;
+  max-height: 250px;
+  cursor: pointer;
+  border-radius: 10px 0px 0px 10px;
+  opacity: 1; }
+
+#news_pull_tab:hover {
+  opacity: 1; }
+
+#news_pull_tab_text {
+  position: relative;
+  top: 50%;
+  font-size: 150%;
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  background-color: white; }
+
+#news_content {
+  float: right;
+  width: 100px;
+  display: none; }
+
+#dashboardMain {
+  min-width: 910px;
+  min-height: 0px; }
+
+.button:hover .infobox {
+  display: block;
+  color: #112233;
+  border-color: none; }
+
+#search_icon:hover .infobox {
+  border-color: tan; }
+
+.infobox {
+  background: #F8F8F8;
+  border: 5px solid white;
+  color: #717171;
+  font-size: 8px;
+  letter-spacing: 1px;
+  line-height: 10px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: -18px;
+  left: 0 px;
+  display: none;
+  border-radius: 10px; }
+
+.no_text_decoration {
+  text-decoration: none; }
+
+#contact_us_link:hover {
+  color: tan; }
+
+a {
+  color: #666666; }
+  a:visited {
+    color: #666666; }
+  a:hover {
+    color: #ffffff;
+    background-color: transparent; }
+  a.navigation_element {
+    background-color: transparent; }
+  a.currentPageLinkHighlight {
+    background-color: rgba(210, 180, 140, 0.5);
+    color: #cccccc; }
+  a.currentPageLinkHighlight:hover {
+    color: #cccccc; }
+
+.f1_container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 600px;
+  height: 90px;
+  z-index: 0; }
+
+.f1_container {
+  perspective: 1000; }
+
+.f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all 1.0s linear; }
+
+.f1_container:hover .f1_card {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa; }
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
+
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 0px;
+  color: white;
+  text-align: center;
+  background-color: #aaa; }
+
+/*-----SVG Navigation Graphics----*/
+/*need container for SVG  as autocenter position reference
+  also note that when the div size becomes 0 height, it does not
+  push down the other elements
+  size adjust the SVG directly.*/
+.svg-nav-decoration {
+  position: relative;
+  max-width: 99%;
+  background-color: red;
+  top: -44px;
+  height: 0px;
+  left: 56px; }
+
+.svg-nav-decoration-size {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1; }
+
+.svg-nav-decoration-hover-area {
+  fill: tan;
+  transition: fill 1s ease-in-out; }
+
+.svg-nav-decoration-hover-area:hover {
+  fill: ivory;
+  transition: fill 1s ease-in-out;
+  stroke: tan;
+  stroke-width: 2;
+  stroke-opacity: 0.3;
+  filter: blur(5px); }
+body {
+  background-color: #112233;
+  color: tan;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0px;
+  padding: 0px; }
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  #error_explanation ul li {
+    font-size: 12px;
+    list-style: square; }
+
+input, select, textarea {
+  color: tan; }
+
+textarea:hover, select:hover, input:hover {
+  color: white; }
+
+.field label {
+  font-weight: 900;
+  color: gray; }
+
+.indexIdInfo {
+  font-size: 10px; }

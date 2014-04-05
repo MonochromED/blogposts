@@ -1,0 +1,24 @@
+<!--search results view-->
+
+
+<h2>Search Results</h2>
+
+
+<% for search_result in @search_results %>
+
+  <% search_object_class = search_result.class.to_s %>
+
+  <% if search_object_class === "Review" %>
+      <br /><%= link_to search_result.title, search_result %> submitted by 
+      <%= search_result.poster %><br />
+      on <%= search_result.date %><br />
+
+
+
+  <% else %>
+    <br /><%= link_to "comment", search_result %> submitted by 
+    <%= search_result.poster %><br />
+    on <%= search_result.date %><br /> 
+  <% end %>
+
+<% end %>

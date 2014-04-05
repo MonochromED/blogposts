@@ -1,0 +1,40 @@
+#Update builder file to quickly modify database of current RAILS_ENV.
+#Run in command line 
+#rails runner userUpdateUtil.rxml.builder
+
+#---CAUTION--THIS WILL DELETE ALL ENTRIES FOR PERTAINING DATABASE--
+#User.delete_all#Uncomment to delete all existing user entries.
+#News.delete_all
+#Review.delete_all
+#------------------------------------------------------------
+
+#Uncomment below to add in a new User entry to the database.  Uncomment and fill value for data members.
+#----------------------------------------------------------------------------------
+#tempVar = News.new
+#tempVar.id = 0#Uncomment and specify ID value to edit existing entry.
+#tempVar.title = "Spicy New Italian!"#Review News Title Here
+#tempVar.article = "A new Italian cafe has opened up on the waterfront.  Spicy style."#article here.
+#tempVar.date = Time.now.getutc
+
+#tempVar.save
+
+#Uncomment below to edit an existing User entry in the database.
+#The code below accesses the active record directly to modify.  
+#After modification, we then save it.
+#We can modify a large amount of entries by passing in a field multiple
+#entities will match with.  We then will go through them and modify them
+#accordingly.
+#--------------------------------------------------------------------
+#pattern = "user_value"#modify pattern for userid to find and modify
+#editVar = User.find_by userid: pattern #id should be unique, so targets only 1
+#editVar.save
+
+#------Multiple Update Version--------------------------------
+
+#pattern = "user"
+#User.find_each do |user|
+# if user.userid.match("#{pattern}")
+#   user.access_rank = 3
+#   user.save
+# end
+#end

@@ -1,0 +1,27 @@
+<!-- old edit comments view -->
+<!-- left here for educational purpose on how to create a form using 'form_tag' instead of form -->
+
+<h2>Edit Comment:</h2>
+
+
+<% commentToEdit = Comment.find(params[:commentid])%>
+<% comment_id_value = commentToEdit.id %>
+<% review_id = params[:reviewid].to_s %>
+<br />
+Comment ID: <%= commentToEdit.id %> <br /><br />
+Comment Text: <%= commentToEdit.comment%> <br /><br />
+
+
+<!--Display current user comment and allow for update. -->
+<%= form_tag :action => :updatecomment, :commentid => "#{comment_id_value}", :reviewid => "#{review_id}" do %>
+
+
+<%= text_area_tag :commentText, commentToEdit.comment %>
+<br />
+<br />
+<%= submit_tag "Update Comment" %>
+<br />
+<% returnPage = review_path "#{review_id}"%>
+<%= link_to 'Back', returnPage %>
+<% end %> 
+
