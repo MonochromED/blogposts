@@ -35,7 +35,7 @@ class CommentsController < ApplicationController
   end
 
   def update
-    if allowAccessIfOwnerNameIsOrRankAtLeast( "#{@comment.poster}" , 1 )
+    if allow_access_if_owner_name_is_or_rank_at_least( "#{@comment.poster}" , 1 )
         respond_to do |format|
           if @comment.update(comment_params)
             format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
@@ -53,7 +53,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    if allowAccessIfOwnerNameIsOrRankAtLeast( "#{@comment.poster}" , 1 )
+    if allow_access_if_owner_name_is_or_rank_at_least( "#{@comment.poster}" , 1 )
       @comment.destroy
       respond_to do |format|
         format.html { redirect_to comments_url }
@@ -69,7 +69,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy(commentToDelete)
-    if allowAccessIfOwnerNameIsOrRankAtLeast( "#{commentToDelete.poster}" , 1 )
+    if allow_access_if_owner_name_is_or_rank_at_least( "#{commentToDelete.poster}" , 1 )
       commentToDelete.destroy
       respond_to do |format|
         format.html { redirect_to comments_url }

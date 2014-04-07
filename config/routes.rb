@@ -35,9 +35,8 @@ Post::Application.routes.draw do
       get 'logout'
       get 'search'
       post 'comment'
-      get 'editcomment'
-      get 'deletecomment'
-      post 'updatecomment'
+      get 'delete_comment'
+      post 'update_comment'
     end
   end
 
@@ -48,9 +47,9 @@ Post::Application.routes.draw do
       get 'register'
       get 'logout'
       get 'userprofile'
-      post 'newuser'
+      post 'new_user'
       post 'validate'
-      post 'updateProfileInfo'
+      post 'update_profile_info'
 
 
     end

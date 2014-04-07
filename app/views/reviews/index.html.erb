@@ -22,7 +22,7 @@
         <tr>
           
           <td><%= link_to 'Show', review %>
-            <% if controller.allowAccessIfOwnerNameIsOrRankAtLeast("#{review.poster}", 1) %>
+            <% if controller.allow_access_if_owner_name_is_or_rank_at_least("#{review.poster}", 1) %>
               <%= link_to 'Edit', edit_review_path(review) %>
               <%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' } %>
             <% else %>

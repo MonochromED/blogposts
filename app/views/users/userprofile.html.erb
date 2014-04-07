@@ -1,17 +1,17 @@
 <!-- User Profile Page -->
-<!--update this to allow for viewing by others.  Will need to fix how userInfo is determined -->
+<!--update this to allow for viewing by others.  Will need to fix how user_info is determined -->
 <!--consider adding default avatar if user has not uploaded in one -->
-<% user = controller.getUser %>
+<% user = controller.get_user %>
 
 <%if user != nil%>
-  <% userInfo = controller.getUserInfo("#{user}") %>
-  <%if userInfo != nil%>
+  <% user_info = controller.get_user_info("#{user}") %>
+  <%if user_info != nil%>
 
-    <strong>Username: </strong> <%= userInfo.fullname %> <br />
-    <strong>Email: </strong> <%= userInfo.email %><br />
-    <strong>Access Rank: </strong> <%= controller.getAccessRank %>
+    <strong>Username: </strong> <%= user_info.full_name %> <br />
+    <strong>Email: </strong> <%= user_info.email %><br />
+    <strong>Access Rank: </strong> <%= controller.get_access_rank %>
     <br />
-    <% if controller.allowAccessIfUserRankAtLeast(1) %>
+    <% if controller.allow_access_if_user_rank_at_least(1) %>
       <div ><strong style="vertical-align: top">Avatar:</strong>
       <!--Check if user has uploaed an avatar. -->
       <% user_avatar = Avatar.find_by avatar_user_id: "#{user}" %>
@@ -35,10 +35,10 @@
 
   Update Profile
 
-  <%= form_tag :action => :updateProfileInfo ,:userIdToEdit => "#{userInfo.userid}" do %>
+  <%= form_tag :action => :update_profile_info ,:user_id_to_edit => "#{user_info.user_id}" do %>
 
   <%= label_tag :email %>
-  <%= text_field_tag :emailupdate, userInfo.email %>
+  <%= text_field_tag :email_update, user_info.email %>
 
   <br />
   <br />
@@ -63,10 +63,10 @@
 
 <br />
 
-<% user_database_reference = userInfo %>
+<% user_database_reference = user_info %>
 <% if user_database_reference != nil %>
-  <% userid = user_database_reference.userid %>
-  <% if controller.allowAccessIfOwnerNameIsOrRankAtLeast("#{userid}", 1) %>
+  <% user_id = user_database_reference.user_id %>
+  <% if controller.allow_access_if_owner_name_is_or_rank_at_least("#{user_id}", 1) %>
   <%= link_to 'Delete', user_database_reference, method: :delete, 
   data: { confirm: 'Are you sure you want to delete your account?' },
   user_deleted: user %> |

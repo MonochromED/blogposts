@@ -53,7 +53,7 @@ class ReviewsController < ApplicationController
   # PATCH/PUT /reviews/1
   # PATCH/PUT /reviews/1.json
   def update
-    if (allowAccessIfOwnerNameIsOrRankAtLeast("#{@review.poster}", 1))
+    if (allow_access_if_owner_name_is_or_rank_at_least("#{@review.poster}", 1))
       respond_to do |format|
         if @review.update(review_params)
           format.html { redirect_to @review, notice: 'Review was successfully updated.' }
@@ -73,7 +73,7 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   # DELETE /reviews/1.json
   def destroy
-    if (allowAccessIfOwnerNameIsOrRankAtLeast("#{@review.poster}", 1))
+    if (allow_access_if_owner_name_is_or_rank_at_least("#{@review.poster}", 1))
       @review.destroy
       respond_to do |format|
         format.html { redirect_to reviews_url }
@@ -95,40 +95,17 @@ class ReviewsController < ApplicationController
   end
 
 
-#Moved into Comments Controller.  Depreciated.  
-=begin
 
-  def editcomment
-
-      
-  end
-
-
-  def updatecomment
-
-    if commentToEdit = Comment.find(params[:commentid])
-      if (belongsToCurrentUser("#{commentToEdit.poster}") || getAccessRank() <= 1  )
-        commentToEdit.comment = "#{params[:commentText]}"
-        commentToEdit.save
-      else
-        flash[:notice] = 'You do not have permission to edit this comment'
-      end
-    end
-    redirect_to review_path "#{params[:reviewid]}"
-
-  end
-=end
-
-  def deletecomment
+  def delete_comment
   
-    if commentToDelete = Comment.find(params[:commentid])
-      if (allowAccessIfOwnerNameIsOrRankAtLeast("#{commentToDelete.poster}", 1))
+    if commentToDelete = Comment.find(params[:comment_id])
+      if (allow_access_if_owner_name_is_or_rank_at_least("#{commentToDelete.poster}", 1))
         commentToDelete.destroy
       else
         flash[:notice] = 'You do not have permission to edit this comment'
       end
     end
-    redirect_to :action => "show", :id => params[:reviewid]
+    redirect_to :action => "show", :id => params[:review_id]
   end
 
 
@@ -153,101 +130,6 @@ class ReviewsController < ApplicationController
 
 
 
-  def newuser
-    respond_to do |format|
-      user = User.new
-      user.userid = params[:userid]
-      user.password = params[:password]
-      user.fullname = params[:fullname]
-      user.email = params[:email]
-      if user.save
-        session[:user_id] = user.userid
-        flash[:notice] = 'New User ID was successfully created.'
-      else
-        flash[:notice] = 'Sorry, User ID already exists.' 
-      end
-      format.html {redirect_to '/reviews' }   
-
-    end
-  end
-#depreciated login validation/logout.  Moved to application controller level  
-=begin
-  def validate
-  
-    respond_to do |format|
-      user = User.authenticate(params[:userid], params[:password])
-      if user
-        session[:user_id] = user.userid
-        flash[:notice] = 'User successfully logged in'
-      else
-        flash[:notice] = 'Invalid user/password'
-      end
-      if session[:return_to_page] === nil
-        format.html {redirect_to "/reviews"}
-      else
-      format.html {redirect_to "#{session[:return_to_page]}" }
-      end
-    end  
-  end
-=end
-#migrated to application_controller
-=begin
-  def logout
-    
-    respond_to do |format|
-      session.delete(:user_id)
-      flash[:notice] = 'User successfully logged out'
-      format.html {redirect_to '/avatars' }
-    end
-  end
-=end
-  def getUser
-    user = session[:user_id]
-    user
-  end
-
-
-#migrated to the application_controller
-=begin
-  def getUserInfo(userInfo = nil)
-    userInfo = User.find_by userid: "#{userInfo}"
-    if (userInfo != nil)
-      userInfo
-    else
-      nil
-    end
-  end
-=end
-
-
-
-# moved to application_controller
-=begin
-  def belongsToCurrentUser(userid)
-    if session[:user_id] === userid
-      true
-    else
-      false
-    end
-  end
-=end
-
-#moved to users_controller
-=begin
-  def updateProfileInfo
-
-    userInfo = getUserInfo(params[:userIdToEdit])
-
-    if userInfo != nil
-      userInfo.email = params[:emailupdate]   
-      userInfo.save
-    else
-      nil
-    end
-
-        redirect_to userprofile_reviews_path
-  end
-=end
 
 
 

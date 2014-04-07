@@ -56,8 +56,8 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     #Clear out current user session login before delete
-    user_to_be_deleted = @user.userid
-    if belongsToCurrentUser(user_to_be_deleted)
+    user_to_be_deleted = @user.user_id
+    if belongs_to_current_user(user_to_be_deleted)
       session[:user_id] = nil
     end
     @user.destroy
@@ -71,19 +71,19 @@ class UsersController < ApplicationController
 
 
   #default registered user access level is 3, unregistered is 4, 1 is admin, 2 is moderator
-  def newuser
+  def new_user
     respond_to do |format|
       user = User.new
-      user.userid = params[:userid]
+      user.user_id = params[:user_id]
       user.password = params[:password]
       user.password_confirmation = params[:password_confirmation]
       user.password_hash = params[:password_hash]
       user.password_salt = params[:password_salt]
-      user.fullname = params[:fullname]
+      user.full_name = params[:full_name]
       user.email = params[:email]
       user.access_rank = 3
       if user.save
-        session[:user_id] = user.userid
+        session[:user_id] = user.user_id
         flash[:notice] = 'New User ID was successfully created.'
         format.html {redirect_to '/reviews' }
       elsif user.password != user.password_confirmation
@@ -99,18 +99,18 @@ class UsersController < ApplicationController
   end
 
 
-  def updateProfileInfo
+  def update_profile_info
 
-    userInfo = getUserInfo(params[:userIdToEdit])
+    user_info = get_user_info(params[:user_id_to_edit])
 
-    if userInfo != nil
-      userInfo.email = params[:emailupdate]   
-      userInfo.save
+    if user_info != nil
+      user_info.email = params[:email_update]   
+      user_info.save
     else
       nil
     end
 
-        redirect_to userprofile_users_path
+    redirect_to userprofile_users_path
   end
 
 
@@ -123,7 +123,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:userid, :password, :password_confirmation, :fullname, :email)
+      params.require(:user).permit(:user_id, :password, :password_confirmation, :full_name, :email)
     end
 
 end

@@ -4,10 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
-  def getUserInfo(userInfo = nil)
-    userInfo = User.find_by userid: "#{userInfo}"
-    if (userInfo != nil)
-      userInfo
+  def get_user_info(user_info = nil)
+    user_info = User.find_by user_id: "#{user_info}"
+    if (user_info != nil)
+      user_info
     else
       nil
     end
@@ -16,9 +16,9 @@ class ApplicationController < ActionController::Base
   def validate
   
     respond_to do |format|
-      user = User.authenticate(params[:userid], params[:password])
+      user = User.authenticate(params[:user_id], params[:password])
       if user
-        session[:user_id] = user.userid
+        session[:user_id] = user.user_id
         flash[:notice] = 'User successfully logged in'
       else
         flash[:notice] = 'Invalid user/password'
@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def getUser
+  def get_user
     user = session[:user_id]
     user
   end
@@ -56,8 +56,8 @@ class ApplicationController < ActionController::Base
     where("title LIKE ? OR article LIKE ? OR poster LIKE ?", pattern, pattern, pattern)
   end
 
-  def belongsToCurrentUser(userid)
-    if session[:user_id] === userid
+  def belongs_to_current_user(user_id)
+    if session[:user_id] === user_id
       true
     else
       false
@@ -65,11 +65,11 @@ class ApplicationController < ActionController::Base
   end
 
   #Returns the access rank of the current user
-  def getAccessRank
+  def get_access_rank
     guest_user_rank = 4
-    user = getUser()
+    user = get_user()
     if user != nil
-      current_user = User.find_by userid: "#{user}"
+      current_user = User.find_by user_id: "#{user}"
       user_rank = current_user.access_rank
 
       #Handler if user access rank missing
@@ -88,8 +88,8 @@ class ApplicationController < ActionController::Base
   
 
   #Checks current user rank against argument value.  Returns boolean
-  def allowAccessIfUserRankAtLeast(access_rank_value)
-    user_rank = getAccessRank()
+  def allow_access_if_user_rank_at_least(access_rank_value)
+    user_rank = get_access_rank()
     if user_rank <= access_rank_value
       true
     else
@@ -99,9 +99,9 @@ class ApplicationController < ActionController::Base
 
 
   #Checks if user has sufficient rank or if user is owner. Returns boolean
-  def allowAccessIfOwnerNameIsOrRankAtLeast(entity_owner, access_rank_value)
-    if ( belongsToCurrentUser(entity_owner) || 
-      allowAccessIfUserRankAtLeast(access_rank_value) )
+  def allow_access_if_owner_name_is_or_rank_at_least(entity_owner, access_rank_value)
+    if ( belongs_to_current_user(entity_owner) || 
+      allow_access_if_user_rank_at_least(access_rank_value) )
       true
     else
       false
@@ -110,8 +110,8 @@ class ApplicationController < ActionController::Base
   end
 
   #Checks if user is registered user.
-  def userIsLoggedIn()
-    user = getUser()
+  def user_is_logged_in()
+    user = get_user()
     if user != nil
       true
     else
@@ -122,7 +122,7 @@ class ApplicationController < ActionController::Base
   #returns “currentPageLinkHighlight” as string if 
   #current page matches the argument path or if
   #current page is a subdirectory of the argument path.
-  def linkMatchesCurrentPage(path)
+  def link_matches_current_page(path)
     if request.fullpath === path
       "currentPageLinkHighlight" 
     elsif request.fullpath.match("#{path}")

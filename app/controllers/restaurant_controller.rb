@@ -4,7 +4,5 @@ class RestaurantController < ApplicationController
     
   end
 
-  def getUser
-  end
 
 end

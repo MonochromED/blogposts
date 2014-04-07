@@ -13,7 +13,7 @@ Comment Text: <%= commentToEdit.comment%> <br /><br />
 
 
 <!--Display current user comment and allow for update. -->
-<%= form_tag :action => :updatecomment, :commentid => "#{comment_id_value}", :reviewid => "#{review_id}" do %>
+<%= form_tag :action => :update_comment, :commentid => "#{comment_id_value}", :reviewid => "#{review_id}" do %>
 
 
 <%= text_area_tag :commentText, commentToEdit.comment %>

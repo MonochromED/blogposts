@@ -2,15 +2,15 @@
 
 <h1>Register for new account</h1>
 
-<%= form_tag :action => 'newuser' do %> 
+<%= form_tag :action => 'new_user' do %> 
   <p> 
     <b>User ID</b><br /> 
-    <%= text_field_tag :userid, nil, id: "first_field_focus" %> 
+    <%= text_field_tag :user_id, nil, id: "first_field_focus" %> 
   </p> 
   <p> 
     <b>Full Name</b><br />
 
-    <%= text_field_tag :fullname %> 
+    <%= text_field_tag :full_name %> 
   </p>
 
   <p> <b>Password</b><br /> 

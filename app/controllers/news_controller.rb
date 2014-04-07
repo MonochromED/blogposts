@@ -20,7 +20,7 @@ class NewsController < ApplicationController
 
   # GET /news/new
   def new
-    if allowAccessIfUserRankAtLeast(1)
+    if allow_access_if_user_rank_at_least(1)
       @news = News.new
       respond_to do |format|
       format.html # new.html.erb
@@ -56,7 +56,7 @@ class NewsController < ApplicationController
   # PATCH/PUT /news/1
   # PATCH/PUT /news/1.json
   def update
-    if allowAccessIfUserRankAtLeast(1)
+    if allow_access_if_user_rank_at_least(1)
       respond_to do |format|
         if @news.update(news_params)
           format.html { redirect_to @news, notice: 'news was successfully updated.' }
@@ -76,7 +76,7 @@ class NewsController < ApplicationController
   # DELETE /news/1
   # DELETE /news/1.json
   def destroy
-    if allowAccessIfUserRankAtLeast(1)
+    if allow_access_if_user_rank_at_least(1)
       @news.destroy
       respond_to do |format|
         format.html { redirect_to news_index_url }
