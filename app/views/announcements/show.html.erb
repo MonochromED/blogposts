@@ -1,0 +1,28 @@
+
+<p>
+  <strong>Title:</strong>
+  <%= @announcement.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @announcement.date %>
+</p>
+
+<p>
+  <strong>Article:</strong>
+  <br />
+  <%= @announcement.article %>
+</p>
+
+<div class="indexIdInfo">Announcement ID: <%= @announcement.id %></div><br />
+<% if controller.allow_access_if_user_rank_at_least(1)  %>
+  <%= link_to 'Edit', edit_announcement_path(@announcement) %>|
+  <%= link_to 'Delete', @announcement, method: :delete, data: { confirm: 'Are you sure?' } %>|
+<% end %>
+<%= link_to 'Back', announcements_index_path %>
+
+
+
+
+

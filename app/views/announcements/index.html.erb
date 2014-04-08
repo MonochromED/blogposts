@@ -1,0 +1,46 @@
+<!--The Main Window View for Annoucement -->
+
+<table>
+
+
+  <tbody>
+   
+    <br />  
+    <h1 id="mainWindowHeader">Latest Announcements</h1>
+    <br />
+    <br />
+    <% for announcement in @announcements %>
+      <tr>
+        <tr>
+          <td>
+            <%= link_to announcement.title, announcement %> <br />
+            <%= announcement.date %><br />
+            <%= announcement.article %><br /><br />
+            <div class="indexIdInfo">Announcement ID: <%= announcement.id %></div><br />
+          </td>
+        </tr>
+        <tr>
+          
+          <td><%= link_to 'Show', announcement %>
+            <% if controller.allow_access_if_user_rank_at_least(1) %>
+              <%= link_to 'Edit', edit_announcement_path(announcement) %>
+              <%= link_to 'Delete', announcement, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% else %>
+            <% end %>
+          </td>
+        </tr>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+<br />
+<% if controller.allow_access_if_user_rank_at_least(1) %>
+  <%= link_to 'New announcement', new_announcement_path %>
+<% end %>
+
+
+
+
+

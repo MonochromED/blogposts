@@ -132,9 +132,9 @@
               <%end%>
 
             <% if controller.allow_access_if_user_rank_at_least(1) %>
-              <strong><%= link_to 'Post News', new_news_path ,{ :class =>
+              <strong><%= link_to 'Post Announcement', new_announcement_path ,{ :class =>
                 "navigation_element 
-                #{controller.link_matches_current_page(new_news_path)}"} %>
+                #{controller.link_matches_current_page(new_announcement_path)}"} %>
               </strong>
             <% end %>
 
@@ -165,7 +165,7 @@
       </div>
       <div id="news">
         <div id="news_pull_tab" class='button'>
-          <div id="news_pull_tab_text">News</div>
+          <div id="news_pull_tab_text">Announcements</div>
           <span class="infobox">
           Click to Toggle
           </span>
@@ -173,13 +173,13 @@
         <div id="news_content">
         <h2>What's cookin'</h2><br />
           The latest restaurant news<br />
-          <%= render( :partial => "news/news_partial") %>
+          <%= render( :partial => "announcements/announcements_partial") %>
         </div>
       </div>
     </div>
 
     <div id="pagination_panel">
-      <% if @reviews != nil || @comments != nil || @news_posts != nil || @users != nil || @avatars != nil %>
+      <% if @reviews != nil || @comments != nil || @announcements != nil || @users != nil || @avatars != nil %>
         <%= will_paginate @search_results, :previous_label => '&#8592; Prev 5', :next_label => 'Next 5 &#8594;' %>
       <% end %>
     </div>

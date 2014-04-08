@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140407050418) do
+=======
+ActiveRecord::Schema.define(version: 20140408073810) do
+>>>>>>> refactor-review-to-blogpost
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "announcements", force: true do |t|
+    t.datetime "date"
+    t.string   "title"
+    t.text     "article"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "avatars", force: true do |t|
     t.string   "avatar_user_id"
@@ -31,14 +43,6 @@ ActiveRecord::Schema.define(version: 20140407050418) do
     t.string   "poster"
     t.text     "comment"
     t.integer  "review_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "news", force: true do |t|
-    t.datetime "date"
-    t.string   "title"
-    t.text     "article"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,8 +1,8 @@
 Post::Application.routes.draw do
   
 
-  get "news_posts/index"
-  resources :news do
+  get "announcements/index"
+  resources :announcements do
     collection do
       get 'logout'
     end

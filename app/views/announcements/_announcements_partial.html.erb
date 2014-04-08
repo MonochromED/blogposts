@@ -1,0 +1,12 @@
+<!--Annoucements Partial-->
+
+<p>
+    <% announcement = Announcement.order('date desc').limit(1) %>
+    <% for item in announcement %>
+      <b><%= item.title %></b><br />
+      <%= item.date %><br />
+      <%= item.article %><br /><br />
+    <% end %>
+</p>
+
+<%= link_to 'More Announcements', announcements_index_path %>
