@@ -24,7 +24,7 @@
         Click to Expand</span>
       </div>
       <div id='search_bar_area'>
-        <%= form_tag search_reviews_path , :method => 'get' do %>
+        <%= form_tag search_article_posts_path , :method => 'get' do %>
         <label><font color="tan" size="-1">Search for review:</font> </label>
         <%= text_field_tag :searchFor, params[:searchFor], :class =>"search_bar", :id => "search_text_bar" %>
         <%= submit_tag "Find", :class => "search_bar", :id => "find_button" %>
@@ -143,13 +143,13 @@
             "navigation_element 
             #{controller.link_matches_current_page(register_users_path)}"  %>
             </strong>
-            <strong><%= link_to 'Post a New Review', new_review_path, :class => 
+            <strong><%= link_to 'Post a New Review', new_article_post_path, :class => 
             "navigation_element 
-            #{controller.link_matches_current_page(new_review_path)}"  %>
+            #{controller.link_matches_current_page(new_article_post_path)}"  %>
             </strong>
-            <strong><%= link_to 'View Reviews', reviews_path, :class => 
+            <strong><%= link_to 'View Reviews', article_posts_path, :class => 
             "navigation_element 
-            #{controller.link_matches_current_page(reviews_path)}"  %>
+            #{controller.link_matches_current_page(article_posts_path)}"  %>
             </strong>
           </div>
         </div>
@@ -159,8 +159,8 @@
       <div id="main_panel">
         <p style="color: orange"><%= flash[:notice] %></p>
         <%= yield %><!-- the 'yield' will yield to the code located in the index.html.erb file 
-        within the current directory for the site.  Thus, if this is for the reviews/index, then yield will
-        yield to the code located within reviews/index.html.erb.  If it is accessed by
+        within the current directory for the site.  Thus, if this is for the article_posts/index, then yield will
+        yield to the code located within article_posts/index.html.erb.  If it is accessed by
         restaurant/index, then it will yield to the code located in the restaurant/index.html.erb code.-->
       </div>
       <div id="news">
@@ -179,7 +179,7 @@
     </div>
 
     <div id="pagination_panel">
-      <% if @reviews != nil || @comments != nil || @announcements != nil || @users != nil || @avatars != nil %>
+      <% if @article_posts != nil || @comments != nil || @announcements != nil || @users != nil || @avatars != nil %>
         <%= will_paginate @search_results, :previous_label => '&#8592; Prev 5', :next_label => 'Next 5 &#8594;' %>
       <% end %>
     </div>

@@ -1,52 +1,52 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @review.title %>
+  <%= @article_post.title %>
 </p>
 <p>
   <strong>Poster:</strong>
-  <%= @review.poster %>
+  <%= @article_post.poster %>
 </p>
 
 <p>
   <strong>Date:</strong>
-  <%= @review.date %>
+  <%= @article_post.date %>
 </p>
 
 <p>
   <strong>Article:</strong>
-  <%= @review.article %>
+  <%= @article_post.article %>
 </p>
-<% if controller.allow_access_if_owner_name_is_or_rank_at_least("#{@review.poster}", 1) %>
-  <%= link_to 'Edit', edit_review_path(@review) %> |
-  <%= link_to 'Delete', @review, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% if controller.allow_access_if_owner_name_is_or_rank_at_least("#{@article_post.poster}", 1) %>
+  <%= link_to 'Edit', edit_article_post_path(@article_post) %> |
+  <%= link_to 'Delete', @article_post, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <% end %>
-<%= link_to 'Back', reviews_path %>
+<%= link_to 'Back', article_posts_path %>
 
 
 <p>
    <h2>Comments:</h2>
-   <% for comment in @review.comments.reverse %>
+   <% for comment in @article_post.comments.reverse %>
    posted by: <%= comment.poster %><br />
        on: <%= comment.date %><br />
    <%= comment.comment %><br /><br />
    <div class="indexIdInfo">
-   Review ID: <%= @review.id %><br />
+   Review ID: <%= @article_post.id %><br />
    Comment ID:<%= comment.id %> <br /><br />
    <%@comment_id_value = comment.id %>
-   <%@review_id_value = @review.id %>
+   <%@article_post_id_value = @article_post.id %>
   </div>
    <!--Validate that current logged user has ownership of this post -->
      <% if controller.allow_access_if_owner_name_is_or_rank_at_least("#{comment.poster}", 1) %>
        <%= link_to 'Edit', edit_comment_path(comment) %> |
-       <%= link_to 'Delete Comment', action: :delete_comment, :comment_id => @comment_id_value, :review_id => @review_id_value  %><br />
+       <%= link_to 'Delete Comment', action: :delete_comment, :comment_id => @comment_id_value, :article_post_id => @article_post_id_value  %><br />
      <% end %>
    <% end %>
 
 </p>
 <hr />
 <h2>Submit new comment:</h2>
-<%= form_tag :action => 'comment', :id => @review do%>
+<%= form_tag :action => 'comment', :id => @article_post do%>
 <% if controller.user_is_logged_in() %>
 <strong><!--Poster: --></strong><%= hidden_field "comment", "poster", :value => "#{controller.get_user}"  %><br /><br />
 <% else %>

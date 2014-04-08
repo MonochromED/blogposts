@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
         flash[:notice] = 'Invalid user/password'
       end
       if session[:return_to_page] === nil
-        format.html {redirect_to "/reviews"}
+        format.html {redirect_to "/article_posts"}
       else
       format.html {redirect_to "#{session[:return_to_page]}" }
       end
@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
     respond_to do |format|
       session.delete(:user_id)
       flash[:notice] = 'User successfully logged out'
-      format.html {redirect_to '/reviews' }
+      format.html {redirect_to '/article_posts' }
     end
   end
 
@@ -50,9 +50,7 @@ class ApplicationController < ActionController::Base
     pattern = params[:searchFor]
     pattern = "%" + pattern + "%"
 
-    #'pattern' variable must be listed as many times as '?' is used.
-    #@reviews = Review.where("title LIKE ? OR article LIKE ? OR poster LIKE ?", pattern, pattern, pattern)
-    @reviews = Review.paginate(:page => params[:page], :per_page => 5).
+    @article_posts = ArticlePost.paginate(:page => params[:page], :per_page => 5).
     where("title LIKE ? OR article LIKE ? OR poster LIKE ?", pattern, pattern, pattern)
   end
 

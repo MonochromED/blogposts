@@ -29,8 +29,8 @@ Post::Application.routes.draw do
     end
   end
 
-  get "reviews/index"
-  resources :reviews do
+  get "article_posts/index"
+  resources :article_posts do
     collection do
       get 'logout'
       get 'search'
@@ -55,7 +55,7 @@ Post::Application.routes.draw do
     end
   end
   
-root 'reviews#index'
+root 'article_posts#index'
 
 
 

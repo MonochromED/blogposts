@@ -11,7 +11,7 @@
 
 
     <strong>Belongs to Review ID:</strong>
-    <%= @comment.review_id %>
+    <%= @comment.article_post_id %>
 
 </div>
 
@@ -31,4 +31,4 @@
 <% end %>
 
 <br />
-<%= link_to 'To Review Containing Comment', review_path(@comment.review_id) %>
+<%= link_to 'To Review Containing Comment', article_post_path(@comment.article_post_id) %>

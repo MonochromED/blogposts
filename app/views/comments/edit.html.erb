@@ -6,10 +6,10 @@
 
 <% commentToEdit = @comment%>
 <% comment_id_value = commentToEdit.id %>
-<% review_id = commentToEdit.review_id.to_s %>
+<% article_post_id = commentToEdit.article_post_id.to_s %>
 <br />
 Comment ID: <%= commentToEdit.id %> <br /><br />
-Belongs to Review ID: <%= review_id %>
+Belongs to Review ID: <%= article_post_id %>
 <br /><br />
 Comment Text: <%= commentToEdit.comment%> <br /><br />
 
@@ -20,7 +20,7 @@ Comment Text: <%= commentToEdit.comment%> <br /><br />
 <!--Display current user comment and allow for update. -->
 
 <%= render 'comment_form' %>
-<% returnPage = review_path "#{review_id}"%>
+<% returnPage = article_post_path "#{article_post_id}"%>
 <%= link_to 'Back to Review', returnPage %>
 </div>
 

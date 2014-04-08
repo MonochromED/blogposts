@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class ReviewsControllerTest < ActionController::TestCase
+class ArticlePostsControllerTest < ActionController::TestCase
   setup do
-    @review = reviews(:one)
+    @article_post = reviews(:one)
   end
 
   test "should get index" do
@@ -16,32 +16,32 @@ class ReviewsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create review" do
-    assert_difference('Review.count') do
-      post :create, review: {title: 'tests', poster:'ed'}
+  test "should create article_post" do
+    assert_difference('article_post.count') do
+      post :create, article_post: {title: 'tests', poster:'ed'}
     end
 
-    assert_redirected_to review_path(assigns(:review))
+    assert_redirected_to review_path(assigns(:article_post))
   end
 
-  test "should show review" do
-    get :show, id: @review
+  test "should show article_post" do
+    get :show, id: @article_post
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @review
+    get :edit, id: @article_post
     assert_response :success
   end
 
-  test "should update review" do
-    patch :update, id: reviews(:one).id, review: { title: 'test', poster: 'celi999' }
-    assert_redirected_to review_path(assigns(:review))
+  test "should update article_post" do
+    patch :update, id: reviews(:one).id, article_post: { title: 'test', poster: 'celi999' }
+    assert_redirected_to review_path(assigns(:article_post))
   end
 
-  test "should destroy review" do
-    assert_difference('Review.count', -1) do
-      delete :destroy, id: @review
+  test "should destroy article_post" do
+    assert_difference('article_post.count', -1) do
+      delete :destroy, id: @article_post
     end
 
     assert_redirected_to reviews_path

@@ -8,7 +8,7 @@
 
   <% search_object_class = search_result.class.to_s %>
 
-  <% if search_object_class === "Review" %>
+  <% if search_object_class === "ArticlePost" %>
       <br /><%= link_to search_result.title, search_result %> submitted by 
       <%= search_result.poster %><br />
       on <%= search_result.date %><br />

@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140407050418) do
-=======
-ActiveRecord::Schema.define(version: 20140408073810) do
->>>>>>> refactor-review-to-blogpost
+ActiveRecord::Schema.define(version: 20140408103419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +22,15 @@ ActiveRecord::Schema.define(version: 20140408073810) do
     t.text     "article"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "article_posts", force: true do |t|
+    t.string   "poster"
+    t.datetime "date"
+    t.text     "article"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
   end
 
   create_table "avatars", force: true do |t|
@@ -42,18 +47,9 @@ ActiveRecord::Schema.define(version: 20140408073810) do
     t.datetime "date"
     t.string   "poster"
     t.text     "comment"
-    t.integer  "review_id"
+    t.integer  "article_post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "reviews", force: true do |t|
-    t.string   "poster"
-    t.datetime "date"
-    t.text     "article"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "title"
   end
 
   create_table "users", force: true do |t|
